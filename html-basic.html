@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html-base</title>
+</head>
+
+<body>
+  <h1>lorem</h1>
+  <h2>
+    Lorem,ipsum.
+  </h2>
+  <h3>
+    Lorem, ipsum dolor.
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro adipisci unde optio sit maxime nihil mollitia
+    consequuntur, enim dolorem explicabo accusantium? Optio nulla atque, ducimus illo aliquam a vitae?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptate nihil dignissimos! Totam, quae.
+    Laudantium impedit vel officia harum debitis ullam reiciendis, itaque ducimus fugiat dolorem quis. Explicabo, non
+    eum.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quasi?
+  </p>
+  <a href="https://www.jd.com/" target="_blank" rel="noopener noreferrer">在新窗口打开京东</a>
+  <a href="mailto:hhhtheshy@gmail.com">点我发邮件</a>
+  <a href="#foot-bottom">跳到页面底部</a>
+  <a href="#" download>点我下载文件</a>
+  <br>
+  <img
+    src="https://images.weserv.nl/?url=https://article.biliimg.com/bfs/article/303c231abbc2a9a0d7a2574a3ce461c21e114179.png"
+    alt="" width="200">
+  <hr>
+  <hr>
+  <marquee behavior="" direction="">piao</marquee>
+  这几种强调 <strong>有什么</strong> <b>区别？</b> <u>这个？</u> <i>这个？</i>
+  <div>
+    &lt;=!-- 这段注释需要出现在页面里面 -->
+  </div>
+  <pre>
+    <code>
+    function a() {
+      return 8
+    }
+    </code>
+  </pre>
+  <hr>
+  <ul>
+    <li>
+      小学
+      <ol>
+        <li>
+          一年级
+          <ol>
+            <li>
+              上学期
+            </li>
+            <li>
+              下学期
+            </li>
+          </ol>
+        </li>
+        <li>
+          二年级
+        </li>
+        <li>
+          三年级
+        </li>
+      </ol>
+    </li>
+    <li>
+      中学
+    </li>
+    <li>
+      大学
+    </li>
+  </ul>
+  <dl>
+    <dt>
+      班级
+    <dd>
+      三年二班
+    </dd>
+    </dt>
+    <dt>
+      老师
+    <dd>张老师</dd>
+    <dd>李老师</dd>
+    <dd>王老师</dd>
+    </dt>
+    <dt>
+      学生
+    <dd>小明</dd>
+    <dd>豆豆</dd>
+    </dt>
+  </dl>
+  <hr>
+  <h2>Google搜索</h2>
+  <form target="_blank" action="https://www.google.com.hk/search">
+    <input type="text">
+    <button type="submit">在新窗口打开搜索结果</button>
+  </form>
+  <form action>
+    <p>个人信息调查表</p>
+    <dl>
+      <dt>性别</dt>
+      <dd>
+        <label><input type="radio" name="gender" value="male">男</label>
+        <label><input type="radio" name="gender" value="female">女</label>
+      </dd>
+      <dt>年龄</dt>
+      <dd>
+        <select name="" id="">
+          <option hidden>请选择</option>
+          <optgroup label="少年">
+            <option value="">1到6岁</option>
+            <option value="">6到12岁</option>
+          </optgroup>
+          <optgroup label="青年">
+            <option value="">13到15岁</option>
+            <option value="">16到18岁</option>
+          </optgroup>
+          <optgroup label="少年">
+            <option value="">1到6岁</option>
+            <option value="">6到12岁</option>
+          </optgroup>
+        </select>
+      </dd>
+      <dt>生日</dt>
+      <dd><input type="date" value="2022-07-05"></dd>
+      <dt>生辰</dt>
+      <dd><input type="time" name=""></dd>
+      <dt>照片</dt>
+      <dd>
+        <input type="file" hidden id="avatar-upload">
+        <label for="avatar-upload">
+          点我上传照片，我比文件上传按钮好看
+        </label>
+      </dd>
+      <dt>自我介绍</dt>
+      <dd>
+        <textarea name="" id="" cols="30" rows="10">&lt;textarea></textarea>
+      </dd>
+    </dl>
+    <fieldset disabled>
+      <legend>这里全部禁用了</legend>
+      <input type="text" name="" id="">
+      <input type="text" name="" id="">
+      <input type="text" name="" id="">
+      <input type="text" name="" id="">
+    </fieldset>
+    <button>提交</button>
+    <button type="reset">重置</button>
+  </form>
+  <hr>
+  <table border="1">
+    <colgroup>
+      <col>
+      <col bgcolor="#bd1000">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>品名</th>
+        <th>进价</th>
+        <th>出价</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>aaa</th>
+        <td>a</td>
+        <td rowspan="2">a</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <th>a</th>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <th>a</th>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <th>a</th>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <img usemap="#map1" width="300"
+    src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" alt="">
+  <map name="map1">
+    <area shape="rect" coords="202 196 56 105" href="https://www.jd.com/" target="_blank" alt="">
+    <area shape="circle" coords="152 308 150" href="https://www.jd.com/" target="_blank" alt="">
+  </map>
+  <hr>
+  <a target="bottom-frame" href="https://www.12306.cn/">12306</a>
+  <br>
+  <iframe name="bottom-frame" src="https://www.nodejs.org/" frameborder="1"></iframe>
+  <div>aaa&nbsp;&nbsp;&nbsp;&nbsp;bbbbb</div>
+  <pre>aaa      bbbbb</pre>
+
+  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+  &lt;span&gt;&lt;/span&gt;
+
+  <div id="foot-bottom"></div>
+</body>
+
+</html>
