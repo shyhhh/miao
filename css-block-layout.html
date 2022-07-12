@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .globalHeader {
+      background-color: #222;
+      color: #f3f3f3;
+    }
+
+    .globalHeader>p {
+      margin: auto;
+      width: 600px;
+      text-align: justify;
+    }
+
+    .globalMain {
+      width: 600px;
+      margin: auto;
+      xborder: #222 1px solid;
+    }
+
+
+    .globalMain header {
+      padding: 10px 0;
+    }
+
+    .globalMain main {
+      /* display: flow-root; */
+    }
+
+    .globalMain main li {
+      text-align: center;
+      line-height: 40px;
+      border: #222 3px solid;
+      background-color: cornflowerblue;
+      margin: 15px;
+      width: 180px;
+      height: 40px;
+    }
+
+    .globalMain main li:nth-child(n) {
+      margin-left: 0px;
+    }
+
+    .globalMain main li:nth-child(n+5) {
+      margin-left: 210px;
+    }
+
+    .globalMain main li:nth-child(n+9) {
+      margin-left: 420px;
+    }
+
+    .globalMain main li:nth-child(4n+5) {
+      margin-top: -220px;
+    }
+
+
+    .globalMain main li:hover {
+      color: #f3f3f3;
+      background-color: cadetblue;
+    }
+
+    .globalMain footer {
+      overflow: hidden;
+    }
+
+    /* .globalMain footer li:not(:last-child) { */
+    .globalMain footer li {
+      border-bottom: #222 1px dashed;
+      margin-bottom: -1px;
+    }
+
+    .globalFooter {
+      /* border: #222 1px solid; */
+      margin-top: 20px;
+      background-color: bisque;
+    }
+
+    .globalFooter p {
+      width: 200px;
+      margin: auto;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="globalHeader">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore repellat qui mollitia ut doloremque,
+      odio veritatis aperiam a aut quibusdam ullam odit laboriosam beatae maxime rem totam sed? Facere.</p>
+  </header>
+  <main class="globalMain">
+    <header>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sequi ex veritatis ipsam totam sunt enim saepe
+        modi reprehenderit laborum eos, impedit illo, repellat unde laboriosam adipisci, qui aperiam cum.</p>
+    </header>
+    <main>
+      <ul>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+        <li>asdhai</li>
+      </ul>
+    </main>
+    <footer>
+      <ul>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+      </ul>
+    </footer>
+  </main>
+  <footer class="globalFooter">
+    <p>
+      &copy; 版权所有
+      <br>
+      本页所有布局均使用块元素
+    </p>
+  </footer>
+</body>
+
+</html>
