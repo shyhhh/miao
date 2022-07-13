@@ -8,42 +8,43 @@
   <title>qq-mail-block</title>
   <style>
     * {
-      background-color: rgba(0, 0, 0, 0.08);
-      box-shadow: inset 0 0 1px red;
-    }
-
-    html {
-      xzoom: 2;
-      height: 100%;
-    }
-
-    body {
       margin: 0;
-      height: 100%;
-      min-width: 800px
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: circle;
     }
 
     header {
-      background-color: #ffddaa;
-      box-sizing: border-box;
+      background-color: rgb(53, 130, 213);
       height: 80px;
-      border-bottom: 1px solid;
-      ;
     }
+
+    aside ul {
+      width: 150px;
+    }
+
 
     aside {
-      width: 200px;
-      height: calc(100% - 80px);
+      background-color: rgb(64, 43, 226);
+      width: 150px;
+      height: calc(100vh - 80px);
       overflow: auto;
-      background-color: aqua;
     }
 
-    main {
-      background-color: blueviolet;
-      height: calc(100% - 80px);
+    aside li {
+      margin-left: 20px;
+    }
+
+
+    article {
       overflow: auto;
-      width: calc(100% - 200px);
-      margin-left: 200px;
+      background-color: rgb(70, 177, 104);
+      width: calc(100% - 150px);
+      height: calc(100vh - 80px);
+      margin-left: 150px;
       margin-top: calc(-100vh + 80px);
     }
 
@@ -107,7 +108,7 @@
       <li>50</li>
     </ul>
   </aside>
-  <main>
+  <article>
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque velit accusantium quam fuga autem magnam
     exercitationem minus minima quis eaque tempore mollitia magni quia, corporis tempora cum neque quibusdam at?
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque velit accusantium quam fuga autem magnam
@@ -125,7 +126,7 @@
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque velit accusantium quam fuga autem magnam
     exercitationem minus minima quis eaque tempore mollitia magni quia, corporis tempora cum neque quibusdam at?
 
-  </main>
+  </article>
 
 
 </body>
