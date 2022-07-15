@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,254 +7,49 @@
   <title>Document</title>
   <style>
     * {
+    background-color: rgba(0,0,0,0.08);
+    box-shadow: inset 0 0 1px red;
+    }
+
+    html, body, section {
+      height: 100%;
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
-    ul {
-      list-style: none;
+    section {
+      font-size: 0;
+    }
+    section > * {
+      display: inline-block;
+    }
+    section > div {
+      width: calc(100% - 450px);
+      height: 100%;
+    }
+    section > aside {
+      width: 150px;
+      height: 100%;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    main>aside:first-child {
-      border: #111 1px solid;
-      width: 300px;
-      background-color: burlywood;
-    }
-
-    .this-right {
-      min-width: 900px;
-      background-color: darkcyan;
-      margin-left: 300px;
-    }
-
-    .one>div {
-      line-height: 30px;
-    }
-
-    .one input {
-      width: 240px;
-      height: 30px;
-    }
-
-    .one button {
-      vertical-align: bottom;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-    }
-
-    .one {
+    header {
       height: 100px;
     }
-
-    .this-content {
-      height: 100vh;
-      border: 1px solid blue;
-      overflow: auto;
-    }
-
-    article {
-      background-color: cornflowerblue;
-      width: calc(100% - 500px);
-      margin-top: calc(-100vh - 102px);
-      border: #111 2px solid;
-      height: calc(100vh + 102px);
-    }
-
-    .this-title {
-      height: 80px;
-      border-bottom: 3px #111 solid;
-    }
-
-    .this-auto {
-      height: 100vh;
-      overflow: auto;
-    }
-
-    .this-right aside:nth-last-child(2) {
-      border: #111 2px solid;
-      background-color: aquamarine;
-      overflow: hidden;
-      height: calc(100vh + 102px);
-      margin-top: calc(-100vh - 102px);
-      width: 250px;
-      margin-left: calc(100% - 500px);
-    }
-
-    .this-right aside:last-child {
-      border: #111 2px solid;
-      background-color: rgb(233, 82, 188);
-      margin-top: calc(-100vh - 102px);
-      height: calc(100vh + 102px);
-      width: 250px;
-      margin-left: calc(100% - 250px);
+    main {
+      height: calc(100% - 100px);
+      overflow: scroll;
     }
 
   </style>
 </head>
-
 <body>
-  <main>
-    <aside>
-      <div class="one">
-        <h1>OALD Se7en</h1>
-        <div>
-          <input type="text"><button>按</button>
-        </div>
-      </div>
-      <div class="this-content">
-        <ul>
-          <li><a href="">01word</a></li>
-          <li><a href="">02word</a></li>
-          <li><a href="">03word</a></li>
-          <li><a href="">04word</a></li>
-          <li><a href="">05word</a></li>
-          <li><a href="">06word</a></li>
-          <li><a href="">07word</a></li>
-          <li><a href="">08word</a></li>
-          <li><a href="">09word</a></li>
-          <li><a href="">10word</a></li>
-          <li><a href="">11word</a></li>
-          <li><a href="">12word</a></li>
-          <li><a href="">13word</a></li>
-          <li><a href="">14word</a></li>
-          <li><a href="">15word</a></li>
-          <li><a href="">16word</a></li>
-          <li><a href="">17word</a></li>
-          <li><a href="">18word</a></li>
-          <li><a href="">19word</a></li>
-          <li><a href="">20word</a></li>
-          <li><a href="">21word</a></li>
-          <li><a href="">22word</a></li>
-          <li><a href="">23word</a></li>
-          <li><a href="">24word</a></li>
-          <li><a href="">25word</a></li>
-          <li><a href="">26word</a></li>
-          <li><a href="">27word</a></li>
-          <li><a href="">28word</a></li>
-          <li><a href="">29word</a></li>
-          <li><a href="">30word</a></li>
-          <li><a href="">31word</a></li>
-          <li><a href="">32word</a></li>
-          <li><a href="">33word</a></li>
-          <li><a href="">34word</a></li>
-          <li><a href="">35word</a></li>
-          <li><a href="">36word</a></li>
-          <li><a href="">37word</a></li>
-          <li><a href="">38word</a></li>
-          <li><a href="">39word</a></li>
-          <li><a href="">40word</a></li>
-          <li><a href="">41word</a></li>
-          <li><a href="">42word</a></li>
-          <li><a href="">43word</a></li>
-          <li><a href="">44word</a></li>
-          <li><a href="">45word</a></li>
-          <li><a href="">46word</a></li>
-          <li><a href="">47word</a></li>
-          <li><a href="">48word</a></li>
-          <li><a href="">49word</a></li>
-          <li><a href="">50word</a></li>
-          <li><a href="">51word</a></li>
-          <li><a href="">52word</a></li>
-          <li><a href="">53word</a></li>
-          <li><a href="">54word</a></li>
-          <li><a href="">55word</a></li>
-          <li><a href="">56word</a></li>
-          <li><a href="">57word</a></li>
-          <li><a href="">58word</a></li>
-          <li><a href="">59word</a></li>
-          <li><a href="">60word</a></li>
-        </ul>
-      </div>
-    </aside>
-    <div class="this-right">
-      <article>
-        <h1 class="this-title">fantasy</h1>
-        <section class="this-auto">
-          <div>
-            <div>daskl jdkla jasda</div>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti quasi, provident
-                aspernatur
-                alias quos magnam tempore minus, in perspiciatis earum? Amet aliquid reiciendis, placeat quidem magnam
-                doloribus ut omnis!</li>
-            </ul>
-          </div>
-        </section>
-      </article>
-      <aside>
-        <h1>vocabulary</h1>
-      </aside>
-      <aside>
-        <h1>hostory</h1>
-      </aside>
+  <section>
+    <aside></aside>
+    <div>
+      <header></header>
+      <main></main>
     </div>
-  </main>
+    <aside></aside>
+    <aside></aside>
+  </section>
 </body>
-
 </html>
