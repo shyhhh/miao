@@ -1,0 +1,164 @@
+<script id="ch0103/01">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var c = a + b
+  console.log(c)
+</script>
+<script id="ch0103/02">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var c = Number( prompt() )
+  c = (a + b) * c
+  console.log(c)
+</script>
+<script id="ch0103/03">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var c = Number( prompt() )
+  c = (a + b) / c
+  console.log(parseInt(c))
+</script>
+<script id="ch0103/04">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+
+  var c = parseInt(a / b)
+  var d = a % b
+  console.log(c)
+  console.log(d)
+</script>
+<script id="ch0103/05">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+
+  var c = (a / b).toFixed(9)
+  console.log(c)
+</script>
+<script id="ch0103/06">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+
+  var c = (b / a).toFixed(5) * 100
+  console.log(c + '%')
+</script>
+<script id="ch0103/07">
+  var x = Number( prompt() )
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+  var c = Number( prompt() )
+  var d = Number( prompt() )
+
+  var res = a * (x ** 3) + b * (x ** 2) + c * x + d
+  console.log(res.toFixed(7))
+</script>
+<script id="ch0103/08">
+  var f = Number( prompt() )
+
+  var res =  5 * (f - 32) / 9
+  console.log(res.toFixed(5))
+</script>
+<script id="ch0103/09">
+  var r = Number( prompt() )
+  var pi = 3.14159
+  var d = 2*r
+  var l = 2 * pi * r
+  var s = pi * (r ** 2)
+
+  console.log(d.toFixed(4))
+  console.log(l.toFixed(4))
+  console.log(s.toFixed(4))
+</script>
+<script id="ch0103/10">
+  var r1 = Number( prompt() )
+  var r2 = Number( prompt() )
+
+  var R = 1/(1/r1 + 1/r2)
+  console.log(R.toFixed(2))
+</script>
+<script id="ch0103/11">
+  var a = Number( prompt() )
+  var b = Number( prompt() )
+
+  var r = a % b
+
+  console.log(r.toFixed(4))
+</script>
+<script id="ch0103/12">
+  var r = Number( prompt() )
+  var pi = 3.14
+
+  var v =(4 / 3)* (pi * r ** 3)
+
+  console.log(v.toFixed(2))
+</script>
+<script id="ch0103/13">
+  var n = Number( prompt() )
+
+  var res = n % 100  + '' + n % 10 + '' + n / 100
+
+  console.log(res)
+</script>
+<script id="ch0103/14">
+  var h = Number( prompt() )
+  var r = Number( prompt() )
+  var Pi = 3.14159
+  var v = h * Pi * r * r
+  var s = 20 / v * 1000
+  console.log(Math.ceil(s))
+</script>
+<script id="ch0103/15">
+  var n = Number( prompt() )
+  var x = Number( prompt() )
+  var y = Number( prompt() )
+
+  var res = n - Math.ceil(y / x)
+
+  console.log(res)
+</script>
+<script id="ch0103/16">
+  var x1 = Number( prompt() )
+  var y1= Number( prompt() )
+  var x2 = Number( prompt() )
+  var y2 = Number( prompt() )
+
+  var res = Math.sqrt((Math.abs(x1 - x2) ** 2 + Math.abs(y1 - y2) ** 2))
+
+  console.log(res.toFixed(3))
+</script>
+<script id="ch0103/17">
+  var x1 = Number( prompt() )
+  var y1 = Number( prompt() )
+  var x2 = Number( prompt() )
+  var y2 = Number( prompt() )
+  var x3 = Number( prompt() )
+  var y3 = Number( prompt() )
+
+  var a = Math.sqrt((Math.abs(x1 - x2) ** 2 + Math.abs(y1 - y2) ** 2))
+  var b = Math.sqrt((Math.abs(x3 - x2) ** 2 + Math.abs(y3 - y2) ** 2))
+  var c = Math.sqrt((Math.abs(x3 - x1) ** 2 + Math.abs(y3 - y1) ** 2))
+  var p = (a + b + c) / 2
+  var res = Math.sqrt(p * (p - a) * (p - b) * (p - c))
+  console.log(res.toFixed(2))
+</script>
+<script id="ch0103/18">
+  var a1 = Number( prompt() )
+  var a2 = Number( prompt() )
+  var n = Number( prompt() )
+
+  var d = (a2 - a1 )
+  var n = a1 + (n - 1) * d
+  console.log(n)
+</script>
+<script id="ch0103/19">
+  var A = Number( prompt() )
+  var B = Number( prompt() )
+  var res = A * B
+
+  console.log(res)
+</script>
+<script id="ch0103/20">
+  var n = Number( prompt() )
+  var res = 2 ** n
+
+  console.log(res)
+</script>
