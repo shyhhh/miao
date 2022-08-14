@@ -901,8 +901,25 @@
   }
   console.log(n)
 </script>
-<script id="ch0105/38">
+<script type="x" id="ch0105/38">
+  var n = +prompt()
 
+  for (let i = 0; i < n; i++) {
+    var m = +prompt()
+    if (m === 0) {
+      var c = +prompt()
+      console.log(0)
+    } else {
+      var t = m
+      for (let j = 0; j < t + 1; j++) {
+        var c = +prompt()
+        if (m != 0) {
+          console.log(m * c)
+        }
+        m--
+      }
+    }
+  }
 </script>
 <script type="x" id="ch0105/39">
   var n = +prompt()
