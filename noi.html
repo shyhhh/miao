@@ -665,6 +665,369 @@
     console.log('End')
   }
 </script>
-<script type='' id="ch0105/22">
+<script type="x" id="ch0105/22">
+  var MonthMoney = 300
+  var realityRem = 0 // 余钱存妈妈后实际剩余的
+  var savings = 0 // 妈妈那里存的
+  var remainder = 0 //  每个月余钱
+  var X
+  var sum = 0
+  for (let i = 1; i <= 12; i++) {
+    var expense = +prompt()
+    remainder = MonthMoney - expense + realityRem // 每个月 余钱
 
+    if (remainder >= 0 && remainder < 100) {
+      savings = 0
+      realityRem = remainder - savings
+    } else if (remainder >= 100) {
+      savings = Math.floor(remainder / 100) * 100
+      realityRem = remainder - savings
+    } else if (remainder < 0) {
+      X = i
+      console.log(-X)
+      break
+    }
+    sum = sum + savings
+    if (i === 12) {
+      sum = 1.2 * sum + realityRem
+      console.log(sum)
+    }
+  }
+</script>
+<script type="x" id="ch0105/23">
+  var m = +prompt()
+  var n = +prompt()
+  var peoNum = 0
+  for (let i = 1; i <= n; i++) {
+    var getNum = +prompt()
+    var temp = true
+
+    if(m > getNum){
+      m = m - getNum
+      temp = false
+    }
+    if(temp){
+      peoNum += 1
+    }
+  }
+  console.log(peoNum)
+</script>
+
+<script type="x" id="ch0105/24">
+  var n = +prompt()
+  var normotension = 0
+  var temp = false
+
+  for (let i = 1; i <= n; i++) {
+    shrink = +prompt()
+    diastole = +prompt()
+    if(shrink > 90 && shrink < 140 && diastole >= 60 && diastole <= 90){
+      temp = true
+    }else {
+      temp = false
+    }
+    if(temp) {
+      normotension += 1
+    }
+  }
+
+  console.log(normotension)
+</script>
+<script type="x" id="ch0105/25">
+  var x, y, z
+  var xyz, zyx
+
+  for (x = 1; x < 7; x++) {
+    for (y = 0; y < 7; y++) {
+      for (z = 1; z < 7; z++) {
+        xyz = x * 7 * 7 + y * 7 + z
+        zyx = z * 9 * 9 + y * 9 + x
+        if (xyz === zyx) {
+          console.log(xyz, x + '' + y + '' + z, z + '' + y + '' + x)
+        }
+      }
+    }
+  }
+</script>
+<script type="x" id="ch0105/26">
+  var n = +prompt()
+  var counter = 0
+  for(let i = 0; i < 5; i++){
+    var num = prompt()
+    if (num.charAt(3) - num.charAt(0) - num.charAt(1) - num.charAt(2) > 0) {
+      counter += 1
+    }
+  }
+  console.log(counter)
+</script>
+<script type="x" id="ch0105/27">
+  var k = +prompt()
+  var n1 = 1
+  var s = 0
+  var res = 0
+  for(let i = 2; ;i++){
+    s = s + 1/i
+    res = s + n1
+    if(res > k){
+      console.log(i)
+      break
+    }
+  }
+</script>
+<script type="x" id="ch0105/28">
+  var n = prompt()
+  for(let i = 1; i <= n.length; i++){
+    console.log(n.charAt(n.length - i))
+  }
+</script>
+<script type="x" id="ch0105/29">
+  var N = prompt()
+  var s = ''
+  for (let i = 1; i <= N.length; i++) {
+    if (+N >= 0) {
+      s = s + N.charAt(N.length - i)
+    } else {
+      N = N.slice(1)
+      s = s + N.charAt(N.length - i)
+      s = '-' + s.replace(/\b(0+)/gi,"")
+    }
+  }
+  console.log(s)
+</script>
+<script type="x" id="ch0105/30">
+  var m = prompt()
+  var k = +prompt()
+  var counter = 0
+  if((+m) % 19 === 0){
+    for(let i =0; i < m.length; i++){
+      if(m.charAt(i) === '3'){
+        counter += 1
+      }
+    }
+  }
+  if(counter === k){
+    console.log('YES')
+  } else{
+    console.log('NO')
+  }
+</script>
+<script type="x" id="ch0105/31">
+  var N = +prompt() // 灯
+  var M = +prompt() // 人
+  var res = '1'
+
+  for (let i = 2; i <= N; i++) { // 灯
+    var counter = 0
+    for (let j = 2; j <= M; j++) { // 人
+      if (i % j === 0) {
+        counter += 1
+      }
+    }
+    if(counter % 2 === 0 ){
+      res = res + ',' + i
+    }
+  }
+  console.log(res)
+</script>
+<script type="x" id="ch0105/32">
+  var n = +prompt()
+  var q1, p1, res = 0
+  var q1 = 2
+  var p1 = 1
+  var res = q1 / p1
+  for(let i = 1; i  < n; i++){
+    q = p1 + q1
+    p = q1
+    p1 = q
+    q1 = q + p
+    res = res + q / p
+  }
+  console.log(res.toFixed(4))
+</script>
+<script type="x" id="ch0105/33">
+  var n = +prompt()
+  var res, n1 = 1
+  res = n1
+  for(let i =2; i <= n; i++) {
+    res = res + (-1) ** (i-1) * (1/i)
+  }
+  console.log(res.toFixed(4))
+</script>
+<script type="x" id="ch0105/34">
+  var n = +prompt()
+  var res = 1
+  var y,x = 1
+  for (let i = 2; i <= n; i++) {
+    y = x * i
+    res = res + y
+    x = y
+  }
+  console.log(res)
+</script>
+<script type="x" id="ch0105/35">
+  var n = +prompt()
+  var res = 2
+  var y,x = 1
+  for (let i = 2; i <= n; i++) {
+    y =  x * 1/i
+    res = res + y
+    x = y
+  }
+  console.log(res.toFixed(10))
+</script>
+<script type="x" id="ch0105/36">
+  var x = +prompt()
+  var n = +prompt()
+
+  var res = 0
+  var v
+  for(let i = 0; i <= n; i++){
+    v = x ** i
+    res = res + v
+  }
+  console.log(res.toFixed(2))
+</script>
+<script type="x" id="ch0105/37">
+  var m = +prompt() // 体力 5
+  var n = +prompt() // 战斗力 2
+  var x = Number(prompt()) // 能量元素 10
+
+  for (let i = 1; i <= x; i++) {
+      n = n + Math.floor(m / n)
+      x =  x - (Math.ceil(m / n) )
+      if(x === 0){
+        break
+      }
+  }
+  console.log(n)
+</script>
+<script id="ch0105/38">
+
+</script>
+<script type="x" id="ch0105/39">
+  var n = +prompt()
+  var s = 0
+  for (let i = 1; i <= n; i++) {
+    var isSeven = String(i).includes(7)
+    if (i % 7 !== 0 && !isSeven){
+      s = s + Math.pow(i, 2)
+    }
+  }
+  console.log(s)
+</script>
+<script type="x" id="ch0105/40">
+  var n = +prompt()
+  var counter = 0
+  var isI
+  for (let i = 1; i <= n; i++) {
+    item = String(i)
+    var l = item.length
+    for (let j = 0; j < l; j++) {
+      if (item.charAt(j) === '1') {
+        counter += 1
+      }
+    }
+  }
+  console.log(counter)
+</script>
+<script type="x" id="ch0105/41">
+  var nl = +prompt()
+  var nr = +prompt()
+  var counter = 0
+  var isI
+  for (let i = nl; i <= nr; i++) {
+    item = String(i)
+    var l = item.length
+    for (let j = 0; j < l; j++) {
+      if (item.charAt(j) === '2') {
+        counter += 1
+      }
+    }
+  }
+  console.log(counter)
+</script>
+<script type="x" id="ch0105/42">
+  var height = +prompt()
+  var width = +prompt()
+  var isSymbol = prompt()
+  var isHollow = +prompt()
+  var res = ''
+  var border = ''
+  if (isHollow === 1) {
+    for (let i = 0; i < width; i++) {
+      res = res + isSymbol
+    }
+    for (let j = 0; j < height; j++) {
+      console.log(res)
+    }
+  }
+
+  if (isHollow === 0) {
+    for (let i = 0; i < width; i++) {
+      border = border + isSymbol
+    }
+
+    for (let j = 0; j < width; j++) {
+      if (j === 0 || j === width - 1) {
+        res = res + isSymbol
+      } else {
+        res = res + ' '
+      }
+    }
+    for (let i = 0; i < height; i++) {
+      if (i === 0 || i === height - 1) {
+        console.log(border)
+      } else {
+        console.log(res)
+      }
+    }
+  }
+</script>
+<script type="x" id="ch0105/43">
+  var n = +prompt()
+  var max = 0
+  var counter = 0
+  for (let j = 2; j <= n; j++) {
+    if (n % j === 0) {
+      if (j % n !== 0) {
+        if (j > max) {
+          max = j
+        }
+      }
+    }
+  }
+  console.log(max)
+</script>
+<script type="x" id="ch0105/44">
+  var n = +prompt()
+  var counter = 0
+  for (let i = 3; i <= 10000; i++) {
+    var temp = true
+    for (let j = 2; j < i; j++) {
+      if(i % j === 0 ){
+        temp = false
+        break
+      }
+    }
+    if(temp){
+      counter +=1
+      if(counter === n - 1){
+        console.log(i)
+        break
+      }
+    }
+  }
+</script>
+
+<script type="x" id="ch0105/45">
+  var n = +prompt()
+  var res = 0
+  var arr = []
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      res += i
+      arr.push(res)
+    }
+  }
+console.log(arr[ n - 1])
 </script>
