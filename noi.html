@@ -1046,5 +1046,177 @@
       arr.push(res)
     }
   }
-console.log(arr[ n - 1])
+  console.log(arr[ n - 1])
+</script>
+<script type="x" id="narcissistic">
+  var n = prompt()
+  var sum = 0
+
+  for (let i = 0; i < n.length; i++) {
+    sum = sum + Math.pow(Number(n.charAt(i)), 3)
+  }
+  if (+n === sum) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+<script type="x" id="narcissistics">
+   debugger
+  var res = 0
+  for(let n = 153; n < 1000; n++){
+    n = String(n)
+    var sum = 0
+    for (let i = 0; i < n.length; i++) {
+      sum = sum + Math.pow(Number(n.charAt(i)), 3)
+    }
+    if (+n === sum) {
+      console.log(n)
+    }
+  }
+</script>
+<script type="x" id="palindrom">
+  var n = prompt()
+  var l = n.length
+  var temp =true
+  for (let i = 0; i < l; i++) {
+    if (n.charAt(i) === n.charAt(l - i -1)) {
+      temp = temp * true
+    } else {
+      temp =  temp * false
+    }
+  }
+  if (temp) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+<script type="x" id="weekday">
+  var year = prompt()
+  var month = prompt()
+  var res = month + '/' + '1'  + '/' + year
+  var weekDays = ['0','1','2','3','4','5','6']
+  var day = new Date(res).getDay()
+  var weekDay = weekDays[day]
+  console.log(weekDay)
+</script>
+<script type="x" id="complete-number">
+  var num = +prompt()
+  var temp = 1
+  var temp = true
+  for (let i = 2; i <= num; i++) {
+    if(num === Math.pow(2, i - 1) * (Math.pow(2, i) - 1)){
+      temp = 1
+      break
+    }else {
+      temp = 0
+    }
+  }
+
+  if (temp) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+<script type="x" id="complete-numbers">
+  for (let j = 2; j <= 1000; j++) {
+
+    var sum = 1
+
+    var sqt = Math.sqrt(j)
+    for (let i = 2; i < sqt; i++) {
+      if (j % i === 0) {
+        sum += i
+        sum += j / i
+      }
+      if (i * i === j) {
+        sum += i
+      }
+    }
+    if(sum === j){
+      console.log(j)
+    }
+  }
+</script>
+<script type="x" id="prime">
+  var num = +prompt()
+  if (num === 1) {
+    console.log('NO')
+  }
+  for (let j = 2; j <= num; j++) {
+    if (num === 2) {
+      console.log('YES')
+    } else if (num % j === 0) {
+      console.log('NO')
+    } else {
+      console.log('YES')
+      break
+    }
+  }
+</script>
+<script type="x" id="primes">
+  for (let i = 2; i <= 100; i++) {
+    var temp = true
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        temp = false
+        break
+      }
+    }
+    if (temp) {
+      console.log(i)
+    }
+  }
+</script>
+<script type="x" id="itob">
+  var num = prompt();
+  var numNumber = +num;
+  var numStr = '';
+  var numStrMinus = '-';
+
+  if (numNumber > 0) {
+    for (var i = 1; i <= numNumber; i++) {
+      if (i == numNumber) {
+        numStr += i;
+      }
+    }
+    alert(numStr);
+  } else if (numNumber < 0) {
+    numNumber = -+num;
+    for (var i = 1; i <= numNumber; i++) {
+      if (i == numNumber) {
+        numStrMinus += i;
+      }
+    }
+    alert(numStrMinus);
+  } else alert('0');
+</script>
+<script type="x" id="lcf&lcm">
+  var x = +prompt();
+  var y = +prompt();
+
+  var max, min, temp;
+  max = x > y ? x : y;
+  min = x < y ? x : y;
+  if(x == 0 || y == 0){
+      alert(max);
+      alert(x * y / max);
+  }
+  while (max % min) {
+      temp = max % min;
+      max = min;
+      min = temp;
+  }
+  alert(min);
+  alert(x * y / min);
+</script>
+<script type="x" id="sqrt">
+  var n = +prompt();
+  let sqrt = (c, depth = 100, x = 1) =>
+    depth <= 0 ? x :
+      sqrt(c, depth - 1, x - (Math.pow(x, 2) - c) / (2 * x))
+
+  console.log(sqrt(n).toFixed(3));
 </script>
