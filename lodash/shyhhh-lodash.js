@@ -51,5 +51,26 @@ var shyhhh = {
       obj[pairs[i][0]] = pairs[i][1]
     }
     return obj
+  },
+  last: function (array) {
+    return array[array.length - 1]
+  },
+  join: function (array, separator) {
+    return array.reduce(
+      (acc, val, i) =>
+      i == array.length - 2 ?
+      acc + val + separator :
+      i == array.length - 1 ? acc + val : acc + val + separator,
+      '')
+  },
+  reverse: function (array) {
+    return array.reverse()
+  },
+  pull: function (array, ...values) {
+    let valuesState = Array.isArray(values[0]) ? values[0] : values
+    let pulled = array.filter((v, i) => !valuesState.includes(v))
+    array.length = 0
+    pulled.forEach(v => array.push(v))
+    return array
   }
 }
