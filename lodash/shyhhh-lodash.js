@@ -31,5 +31,25 @@ var shyhhh = {
     }
     return array
   },
-
+  head: function (array) {
+    return array[0]
+  },
+  flatten: function (array) {
+    return [].concat(...array)
+  },
+  flattenDeep: function (array) {
+    return [].concat(...array.map(v => (Array.isArray(v) ? flattenDeep(v) : v)))
+  },
+  flattenDepth: function (array, depth = 1) {
+    return depth != 1 ?
+      array.reduce((a, v) => a.concat(Array.isArray(v) ? flattenDepth(v, depth - 1) : v), []) :
+      array.reduce((a, v) => a.concat(v), [])
+  },
+  fromPairs: function (pairs) {
+    let obj = {}
+    for (let i = 0; i < pairs.length; i++) {
+      obj[pairs[i][0]] = pairs[i][1]
+    }
+    return obj
+  }
 }
