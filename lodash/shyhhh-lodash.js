@@ -1,5 +1,5 @@
 var shyhhh = {
-  chunk(arr, n = 1) {
+  chunk: function chunk(arr, n = 1) {
     let arr = []
     for (let i = 0; i < arr.length; i++) {
       let group = []
