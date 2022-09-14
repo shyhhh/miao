@@ -13,16 +13,23 @@ var shyhhh = {
     return array.concat(...value)
   },
   difference: function (array, ...value) {
-    const s = new Set(...value)
+    const s = new Set([].concat(...value))
     return array.filter(x => !s.has(x))
   },
-  differenceBy: function (array, [values], [iteratee = _.identity]) {
-
-  },
   differenceWith: function (array, val, comp) {
-   return array.filter(a => val.findIndex(b => comp(a, b)) === -1)
+    return array.filter(a => val.findIndex(b => comp(a, b)) === -1)
   },
   drop: function (array, n = 1) {
     return array.splice(n)
-  }
+  },
+  dropRight: function (array, n = 1) {
+    return array.slice(0, -n)
+  },
+  fill: function (array, value, start = 0, end = array.length) {
+    for (let i = start; i < end; i++) {
+      array[i] = value
+    }
+    return array
+  },
+
 }
