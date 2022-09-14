@@ -23,7 +23,7 @@ var shyhhh = {
     return array.splice(n)
   },
   dropRight: function (array, n = 1) {
-    return array.slice(0, -n)
+    return array.slice(0, -n || undefined)
   },
   fill: function (array, value, start = 0, end = array.length) {
     for (let i = start; i < end; i++) {
