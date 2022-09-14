@@ -1,16 +1,16 @@
 var shyhhh = {
-  chunk: function (arr, n = 1) {
-    let arr = []
-    for (let i = 0; i < arr.length; i++) {
+  chunk: function (array, size = 1) {
+    let res = []
+    for (let i = 0; i < array.length; i++) {
       let group = []
-      for (let j = 0; j < n; j++) {
-        group.push(arr[i++])
-        if (i === arr.length) {
+      for (let j = 0; j < size; j++) {
+        group.push(array[i++])
+        if (i === array.length) {
           break
         }
       }
-      arr.push(group)
+      res.push(group)
     }
-    return arr
+    return res
   }
 }
