@@ -75,6 +75,11 @@ var shyhhh = {
     return array
   },
   indexOf: function (array, value = 0, fromIndex = 0) {
-    return array.indexOf(value) + fromIndex
+    for (let i = fromIndex; i < array.length; i++) {
+      if (array[i] == value) {
+        return i
+      }
+    }
+    return -1
   }
 }
