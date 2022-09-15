@@ -81,5 +81,8 @@ var shyhhh = {
       }
     }
     return -1
+  },
+  initial: function (array) {
+    return array.splice(0, array.length - 1)
   }
 }
