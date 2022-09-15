@@ -38,11 +38,12 @@ var shyhhh = {
     return [].concat(...array)
   },
   flattenDeep: function (array) {
-    return [].concat(...array.map(v => (Array.isArray(v) ? flattenDeep(v) : v)))
+    return [].concat(...array.map(v => (Array.isArray(v) ? shyhhh.flattenDeep(v) : v)))
   },
   flattenDepth: function (array, depth = 1) {
+
     return depth != 1 ?
-      array.reduce((a, v) => a.concat(Array.isArray(v) ? flattenDepth(v, depth - 1) : v), []) :
+      array.reduce((a, v) => a.concat(Array.isArray(v) ? shyhhh.flattenDepth(v, depth - 1) : v), []) :
       array.reduce((a, v) => a.concat(v), [])
   },
   fromPairs: function (pairs) {
@@ -72,5 +73,8 @@ var shyhhh = {
     array.length = 0
     pulled.forEach(v => array.push(v))
     return array
+  },
+  indexOf: function (array, value = 0, fromIndex = 0) {
+    return array.indexOf(value) + fromIndex
   }
 }
